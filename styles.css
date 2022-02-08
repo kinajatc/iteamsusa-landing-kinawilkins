@@ -1,0 +1,54 @@
+.site-wrap{
+    height: 100%;
+    display: grid;
+    grid-template-columns: 1fr repeat(3,minmax(0,363px)) 1fr;
+    grid-gap: 50px;
+    /* grid-template-rows: auto; */
+    grid-template-rows: 50px 200px 200px min-content 200px 200px 50px;  
+    grid-template-areas: 
+        "nav nav nav nav nav"
+        ". portfolio portfolio portfolio ."
+        ". main main main ."
+        ". form form form ."
+        ". certifications certifications certifications ."
+        ". work-samples work-samples work-samples . "
+        "footer footer footer footer footer";
+}
+
+nav{
+    grid-area: nav;
+    background-color: red;
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.portfolio{
+    grid-area: portfolio;
+    background-color: orange;
+}
+
+main{
+    grid-area: main;
+    background-color: yellow;
+}
+
+article{
+    grid-area: form;
+    background-color: green;
+}
+
+.certification{
+    grid-area: certifications;
+    background-color: blue;
+}
+
+.work-samples{
+    grid-area: work-samples;
+    background-color: purple;
+}
+
+footer{
+    grid-area: footer;
+    background-color: gray;
+}
