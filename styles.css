@@ -1,13 +1,22 @@
+body{
+    /* width: 100%; */
+    text-align: center;
+    margin: 0;
+    padding: 0;
+    font-family: 'Montserrat', sans-serif;
+    line-height: 1.5em;
+}
+
 .site-wrap{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr repeat(3,minmax(0,363px)) 1fr;
     grid-gap: 50px;
     /* grid-template-rows: auto; */
-    grid-template-rows: 50px 200px 200px min-content 200px 200px 50px;  
+    grid-template-rows: 100px 200px 200px min-content min-content min-content 100px;  
     grid-template-areas: 
         "nav nav nav nav nav"
-        ". portfolio portfolio portfolio ."
+        ". . portfolio . ."
         ". main main main ."
         ". form form form ."
         ". certifications certifications certifications ."
@@ -21,34 +30,107 @@ nav{
     display: flex;
     align-items: center;
     justify-content: space-around;
+    text-transform: uppercase;
+    font-size: large;
+}
+
+nav img{
+    height: 120px;
+    position: relative;
+    top: 1em;
+    left: 0;
+
+}
+
+nav a{
+    text-decoration: none;
+    color: black;
+}
+
+nav a:hover{
+    font-weight: 500;
 }
 
 .portfolio{
     grid-area: portfolio;
     background-color: orange;
+    border-radius: 10px;
 }
 
 main{
     grid-area: main;
     background-color: yellow;
+    text-align: center;
+}
+
+main .btn{
+    float: right;
+    color: black;
+    text-decoration: none;
+    border: 2px solid black;
+    padding: 10px;
+    border-radius: 5px;
+    text-transform: uppercase;
+    margin: 20px;
+
 }
 
 article{
     grid-area: form;
     background-color: green;
+    text-align: center;
+
 }
 
 .certification{
     grid-area: certifications;
     background-color: blue;
+    display: grid;
+    text-align: center;
 }
+
+.certification .badges{
+    margin-top: 20px;
+    margin-bottom: 10px;
+    border: black solid 2px;
+    border-radius: 10px;
+    padding: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr;
+}
+
+.certification .badges img{
+    
+    width: 200px;
+}
+
 
 .work-samples{
     grid-area: work-samples;
     background-color: purple;
+    text-align: center;
+    display: grid;
+}
+
+.work-samples .works{
+    margin-top: 20px;
+    border: black solid 2px;
+    border-radius: 10px;
+    padding: 25px;
+    grid-template-columns: 1fr 1fr 1fr 1fr 1fr;
+}
+
+.work-samples img{
+    width: 200px;
 }
 
 footer{
     grid-area: footer;
     background-color: gray;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    /* position: fixed;
+    bottom: 0;
+    right: 0;
+    left: 0; */
 }
