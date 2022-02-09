@@ -7,7 +7,7 @@ body{
     line-height: 2em;
     font-family: bicyclette,sans-serif;
     font-size: medium;
-    font-weight: 700;
+    font-weight: 500;
     font-style: normal;
 }
 
@@ -21,9 +21,9 @@ h1, .btn{
     height: 100%;
     display: grid;
     grid-template-columns: 1fr 300px 400px 300px 1fr;
-    grid-gap: 50px;
+    grid-gap: 40px;
     /* grid-template-rows: auto; */
-    grid-template-rows: 100px 350px min-content min-content min-content min-content 100px;  
+    grid-template-rows: 100px 300px min-content min-content min-content min-content 100px;  
     grid-template-areas: 
         "nav nav nav nav nav"
         ". . portfolio . ."
@@ -74,7 +74,7 @@ nav a{
 }
 
 .portfolio img{
-    height: 350px;
+    height: 300px;
 }
 
 main{
@@ -170,7 +170,7 @@ article{
     bottom: 0px;
     right: 0;
     width: 210px;
-    height: 45%;
+    height: 50%;
     padding: 10px;
 }
 
